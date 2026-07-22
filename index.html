@@ -263,7 +263,7 @@
     </div>
     <div class="editor-row">
       <label>標籤（用逗號分隔）</label>
-      <input type="text" id="editTags" placeholder="例如: 齒輪, 待辦, 靈感">
+      <input type="text" id="editTags" placeholder="例如: 機器、金融、社會...">
     </div>
     <div class="editor-row">
       <label>資料夾</label>
@@ -496,7 +496,7 @@ function renderNoteGrid(){
   }
   const notes = getVisibleNotes();
   if(notes.length === 0){
-    grid.innerHTML = '<div class="empty-state">這裡還沒有筆記，按右上角「+ 新增筆記」開始寫。</div>';
+    grid.innerHTML = '<div class="empty-state">這裡還沒有筆記，按右上角「新增筆記」開始寫。</div>';
     return;
   }
   notes.sort((a,b) => (b.updatedAt||0) - (a.updatedAt||0)).forEach(n => {
